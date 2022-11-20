@@ -15,11 +15,11 @@ app.get('/', (req, res) => {
   //res.redirect('../frontend/index.html');
 });
 // Require employee routes
-//const employeeRoutes = require('./src/routes/employee.routes')
+const employeeRoutes = require('./src/routes/employee.routes')
 const userRoutes = require('./src/routes/user.routes')
 const medicineRoutes = require('./src/routes/medicine.routes')
 // using as middleware
-//app.use('/api/v1/employees', employeeRoutes)
+app.use('/api/v1/employees', employeeRoutes)
 app.use('/api/v1/users',userRoutes);
 app.use('/api/v1/users/add',userRoutes);
 app.use('/api/v1/medicine',medicineRoutes);
@@ -29,3 +29,5 @@ app.use('/api/v1/medicine/Delete',medicineRoutes);
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
+
+module.exports = app;

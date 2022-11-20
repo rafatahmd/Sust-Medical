@@ -1,6 +1,7 @@
 'use strict';
 var dbConn = require('../../config/db.config');
 var Medicine = function(medicine){
+  this.Medicine_Store_ID = medicine.Medicine_Store_ID;
     this.Medicine_Name    = medicine.Medicine_Name;
     this.Medicine_Quantity = medicine.Medicine_Quantity;
     this.MEdicine_Company_Name   = medicine.MEdicine_Company_Name;
