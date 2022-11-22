@@ -1,2 +1,2 @@
 # Sust-Medical
- Automated System for SUST medical centre
+ Automation System for SUST medical centre
