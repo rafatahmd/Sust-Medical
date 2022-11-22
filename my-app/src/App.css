@@ -11,7 +11,6 @@
   border: none !important;
   outline: none !important;
   text-decoration: none !important;
-  text-transform: capitalize;
   font-weight: 400;
   transition: all 0.2s linear;
 }
@@ -625,4 +624,8 @@ input[type="submit"]:hover {
 }
 .signup_link a:hover {
   text-decoration: underline;
+}
+
+.loginAppointmen:hover {
+  background: #6fd26b;
 }

@@ -11,6 +11,7 @@ import Admin from "./components/admin";
 import About from "./components/about";
 import Appointment from "./components/appointment";
 import RegistrationPatient from "./components/registrationPatient";
+import Home from "./components/home";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,22 @@ const router = createBrowserRouter([
   {
     path: "registrationpatient",
     element: <RegistrationPatient />,
+  },
+  {
+    path: "patient_dashboard",
+    element: <RegistrationPatient />,
+  },
+  {
+    path: "doctor_dashboard",
+    element: <About />,
+  },
+  {
+    path: "admin_dashboard",
+    element: <Appointment />,
+  },
+  {
+    path: "appointment_dashboard",
+    element: <App />,
   },
 ]);
 

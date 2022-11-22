@@ -1,6 +1,22 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
+const loginButtonStyle = {
+  backgroundColor: "#91989D",
+  color: "black",
+  padding: "5px 45px",
+  borderRadius: "8px",
+  fontSize: "20px",
+};
 
 function Appointment() {
+  const navigate = useNavigate();
+
+  const onLogin = (e) => {
+    e.preventDefault();
+    navigate("/appointment_dashboard");
+  };
+
   return (
     <div>
       <section class="contact" id="contact">
@@ -38,13 +54,13 @@ function Appointment() {
                   placeholder="message ( optional )"
                 ></textarea>
 
-                <input
+                <button
+                  onClick={onLogin}
+                  className="loginAppointment"
                   type="submit"
-                  name=""
-                  id=""
-                  value="make appointment"
-                  class="button"
-                ></input>
+                >
+                  <div style={loginButtonStyle}>Make an Appointment</div>
+                </button>
               </form>
             </div>
           </div>
