@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import Patient from "./components/patient";
 import Doctor from "./components/doctor";
@@ -12,6 +11,13 @@ import About from "./components/about";
 import Appointment from "./components/appointment";
 import RegistrationPatient from "./components/registrationPatient";
 import Home from "./components/home";
+import Doctor_dashboard from "./components/doctor_dashboard";
+import Allpatient from "./components/Allpatient";
+import Patient_dashboard from "./components/patient_dashboard";
+import Alldoctor from "./components/alldoctor";
+import Allmedicine from "./components/allmedicine";
+import Admin_dashboard from "./components/admin_dashboard";
+import Adddoctor from "./components/adddoctor";
 
 const router = createBrowserRouter([
   {
@@ -48,19 +54,35 @@ const router = createBrowserRouter([
   },
   {
     path: "patient_dashboard",
-    element: <RegistrationPatient />,
+    element: <Patient_dashboard />,
   },
   {
     path: "doctor_dashboard",
-    element: <About />,
+    element: <Doctor_dashboard />,
   },
   {
     path: "admin_dashboard",
-    element: <Appointment />,
+    element: <Admin_dashboard />,
   },
   {
     path: "appointment_dashboard",
     element: <App />,
+  },
+  {
+    path: "allpatien",
+    element: <Allpatient />,
+  },
+  {
+    path: "alldoctor",
+    element: <Alldoctor />,
+  },
+  {
+    path: "allmedicine",
+    element: <Allmedicine />,
+  },
+  {
+    path: "adddoctor",
+    element: <Adddoctor />,
   },
 ]);
 

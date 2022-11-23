@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
+const cors = require("cors");
 // create express app
 const app = express();
 // Setup server port
@@ -20,12 +21,15 @@ const userRoutes = require("./src/routes/user.routes");
 const medicineRoutes = require("./src/routes/medicine.routes");
 const doctroRoutes = require("./src/routes/doctor.routes");
 const appointmentRoutes = require("./src/routes/appointment.routes");
+const patientRoutes = require("./src/routes/patient.routes");
 // using as middleware
+app.use(cors());
 app.use("/api/v1/employees", employeeRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/medicine", medicineRoutes);
 app.use("/api/v1/doctor", doctroRoutes);
 app.use("/api/v1/appointment", appointmentRoutes);
+app.use("/api/v1/patient", patientRoutes);
 // listen for requests
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);

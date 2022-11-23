@@ -8,7 +8,7 @@ router.post("/add", medicineController.create);
 // Retrieve a single employee with id
 //router.get('/:id', medicineController.findById);
 // Update a employee with id
-router.put("/:Medicine_Store_ID", medicineController.update);
-// Delete a employee with id
-router.delete("/:Medicine_Store_ID", medicineController.delete);
+// router.put("/:Medicine_Store_ID", medicineController.update);
+// // Delete a employee with id
+// router.delete("/:Medicine_Store_ID", medicineController.delete);
 module.exports = router;
