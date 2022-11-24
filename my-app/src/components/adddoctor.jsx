@@ -21,101 +21,105 @@ function Adddoctor() {
       Doctor_Email: email,
       Doctor_Contact_Number: contact,
       Doctor_Designation: designation,
-      Doctor_Start_Time: time,
-      Doctor_End_Time: endtime,
+      Doctor_Duty_Start: time,
+      Doctor_Duty_End: endtime,
     });
     console.log(res);
     Router("/alldoctor");
   };
 
   return (
-    <div class="main-w3layouts wrapper">
-      <h1>Add Dotor</h1>
+    <div className="bg-secondary align-items-center text-center">
+      <h1>ADD DOCTOR</h1>
       <div class="main-agileinfo">
         <div class="agileits-top">
           <form>
-            <input
-              class="text"
-              type="text"
-              name="DoctorID"
-              placeholder="Doctor ID"
-              required=""
-              onChange={(e) => setID(e.target.value)}
-            ></input>
-            <input
-              class="text email"
-              type="text"
-              name="DoctorName"
-              placeholder="Doctor Name"
-              onChange={(e) => setName(e.target.value)}
-              required=""
-            ></input>
-            <input
-              class="text"
-              type="email"
-              name="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-              required=""
-            ></input>
-            <input
-              class="text w3lpass"
-              type="text"
-              name="Contact"
-              placeholder="Contact Number"
-              onChange={(e) => setContact(e.target.value)}
-              required=""
-            ></input>
-            <input
-              class="text"
-              type="text"
-              name="Designation"
-              placeholder="Designation"
-              onChange={(e) => setDesignation(e.target.value)}
-              required=""
-            ></input>
+            <ul>
+              <li>
+                {" "}
+                <input
+                  class="text"
+                  type="text"
+                  name="DoctorID"
+                  placeholder="Doctor ID"
+                  required=""
+                  onChange={(e) => setID(e.target.value)}
+                ></input>
+              </li>
+              <li>
+                <input
+                  class="text email"
+                  type="text"
+                  name="DoctorName"
+                  placeholder="Doctor Name"
+                  onChange={(e) => setName(e.target.value)}
+                  required=""
+                ></input>
+              </li>
+              <li>
+                <input
+                  class="text"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required=""
+                ></input>
+              </li>
+              <li>
+                <input
+                  class="text w3lpass"
+                  type="text"
+                  name="Contact"
+                  placeholder="Contact Number"
+                  onChange={(e) => setContact(e.target.value)}
+                  required=""
+                ></input>
+              </li>
+              <li>
+                <input
+                  class="text"
+                  type="text"
+                  name="Designation"
+                  placeholder="Designation"
+                  onChange={(e) => setDesignation(e.target.value)}
+                  required=""
+                ></input>
+              </li>
 
-            <input
-              class="text"
-              type="text"
-              placeholder="Duty Start Time *"
-              name="date"
-              onfocus="(this.type = 'time')"
-              onChange={(e) => setTime(e.target.value)}
-              required
-              autofocus
-            ></input>
+              <li>
+                <input
+                  class="text"
+                  type="text"
+                  placeholder="Doctor_Duty_Start"
+                  name="Doctor_Duty_Start"
+                  onChange={(e) => setTime(e.target.value)}
+                  required=""
+                ></input>
+              </li>
 
-            <input
-              class="text"
-              type="text"
-              placeholder="Duty End Time *"
-              name="date"
-              onfocus="(this.type = 'time')"
-              required
-              onChange={(e) => setEndtime(e.target.value)}
-              autofocus
-            ></input>
+              <li>
+                <input
+                  class="text"
+                  type="text"
+                  placeholder="Doctor_Duty_End"
+                  name="Doctor_Duty_End"
+                  onChange={(e) => setEndtime(e.target.value)}
+                  required=""
+                ></input>
+              </li>
+            </ul>
 
-            <button type="button" onClick={HandleSubmit}>
-              ADD
+            <button
+              className="registerbtn"
+              type="button"
+              onClick={HandleSubmit}
+            >
+              ADD DOCTOR
             </button>
           </form>
         </div>
       </div>
-
-      <ul class="colorlib-bubbles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
     </div>
   );
 }

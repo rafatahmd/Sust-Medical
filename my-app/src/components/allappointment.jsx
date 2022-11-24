@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 
-export default function Allpatient() {
+export default function Allappointment() {
   const [patient, setPatient] = useState(null);
   useEffect(() => {
     const getpatient = async () => {
-      const ans = await axios.get("http://localhost:5000/api/v1/patient");
+      const ans = await axios.get("http://localhost:5000/api/v1/appointment");
       console.log(ans);
       setPatient(ans.data);
     };
@@ -17,38 +17,23 @@ export default function Allpatient() {
     <div>
       <div className="bg-primary">
         <h1 className="bg-secondary align-items-center text-center">
-          <b>All Patient List</b>
+          <b>All Appointment List</b>
         </h1>
         <nav className="navigation">
           <ul className="bg-secondary">
             <li>
               <h4>
-                <b>Patient_Name</b>
+                <b>Appointment Id</b>
               </h4>
             </li>
             <li>
               <h4>
-                <b>Patient_Reg_No</b>
+                <b>Patient Reg No</b>
               </h4>
             </li>
             <li>
               <h4>
-                <b>Patient Session</b>
-              </h4>
-            </li>
-            <li>
-              <h4>
-                <b>Patient Blood Group</b>
-              </h4>
-            </li>
-            <li>
-              <h4>
-                <b>Patient Age</b>
-              </h4>
-            </li>
-            <li>
-              <h4>
-                <b>Patient Sex</b>
+                <b>Patient Name</b>
               </h4>
             </li>
           </ul>
@@ -62,22 +47,13 @@ export default function Allpatient() {
                 <nav className="navigation">
                   <ul>
                     <li>
-                      <h4>{item.Patient_Name}</h4>
+                      <h4>{item.Appointment_ID}</h4>
                     </li>
                     <li>
                       <h4>{item.Patient_Reg_No}</h4>
                     </li>
                     <li>
-                      <h4>{item.Patient_session}</h4>
-                    </li>
-                    <li>
-                      <h4>{item.Patient_Blood}</h4>
-                    </li>
-                    <li>
-                      <h4>{item.Patient_Age}</h4>
-                    </li>
-                    <li>
-                      <h4>{item.Patient_Sex}</h4>
+                      <h4>{item.Patient_Name}</h4>
                     </li>
                   </ul>
                 </nav>

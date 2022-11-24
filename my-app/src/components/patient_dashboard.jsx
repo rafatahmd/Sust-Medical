@@ -27,7 +27,7 @@ function Patient_dashboard() {
             <img src="images/medicine.png" />
           </div>
           <div class="card_title title-white">
-            <Link to={"/allnedicine"}>show madicine</Link>
+            <Link to={"/allmedicine"}>show madicine</Link>
           </div>
         </div>
       </div>

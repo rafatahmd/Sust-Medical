@@ -37,16 +37,6 @@ function Home() {
                 <li class="nav-item">
                   <Link to={`appointment`}>Appointment</Link>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Patient_Appointment.html">
-                    Prescription
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Patient_Appointment.html">
-                    Prescription
-                  </a>
-                </li>
               </ul>
             </nav>
 
@@ -165,7 +155,7 @@ function Home() {
           <div className="container">
             <div className="row min-vh-100 align-items-center text-center text-md-left">
               <div className="col-md-6 pr-md-5 " data-aos="zoom-in">
-                <img src={"images/patient1.png"} width="100%" alt="patient" />
+                <img src={"images/patient1.jpg"} width="100%" alt="patient" />
               </div>
 
               <div className="col-md-6 pl-md-5 content" data-aos="fade-left">

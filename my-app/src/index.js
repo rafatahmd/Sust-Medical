@@ -18,6 +18,8 @@ import Alldoctor from "./components/alldoctor";
 import Allmedicine from "./components/allmedicine";
 import Admin_dashboard from "./components/admin_dashboard";
 import Adddoctor from "./components/adddoctor";
+import Registrationdoctor from "./components/registrationdoctor";
+import Allappointment from "./components/allappointment";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +51,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "registrationpatient",
+    path: "registrationPatient",
     element: <RegistrationPatient />,
   },
   {
@@ -84,6 +86,20 @@ const router = createBrowserRouter([
     path: "adddoctor",
     element: <Adddoctor />,
   },
+
+  {
+    path: "allappointment",
+    element: <Allappointment />,
+  },
+
+  {
+    path: "registrationdoctor",
+    element: <Adddoctor />,
+  },
+  // {
+  //   path: "registrationdoctor",
+  //   element: <Registrationdoctor />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

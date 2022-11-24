@@ -23,25 +23,64 @@ export default function Allmedicine() {
 
   return (
     <div>
-      <h1 className="bg-secondary">All Medicine</h1>
-
-      <div className="">
-        {medicine
-          ? medicine.map((item) => (
-              <div className={pstyle}>
-                <div className="">
-                  <p>Medicine Name :{item.Medicine_Name}</p>
-                  <p className="">
-                    Medicine Quantity:{item.Medicine_Quantity}{" "}
-                  </p>
-                  <p className="">
-                    Medicine Expire Date:{item.Medicine_Expire_Date}
-                  </p>
-                </div>
-              </div>
-            ))
-          : null}
+      <div className="bg-primary">
+        <h1 className="bg-secondary align-items-center text-center">
+          <b>All Medicine List</b>
+        </h1>
+        <nav className="navigation">
+          <ul className="bg-secondary">
+            <li>
+              <h4>
+                <b>Medicine_Name</b>
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <b>Medicine_Quantity</b>
+              </h4>
+            </li>
+            <li>
+              <h4>
+                <b>Medicine_Expire_Date</b>
+              </h4>
+            </li>
+          </ul>
+        </nav>
       </div>
+
+      {medicine
+        ? medicine.map((item) => (
+            <div>
+              <div>
+                <nav className="navigation">
+                  <ul>
+                    <li>
+                      <h4>{item.Medicine_Name}</h4>
+                    </li>
+                    <li>
+                      <h4>{item.Medicine_Quantity}</h4>
+                    </li>
+                    <li>
+                      <h4>{item.Medicine_Expire_Date}</h4>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            // <div className={pstyle}>
+            //   <div className="">
+            //     <p>Medicine Name :{item.Medicine_Name}</p>
+            //     <p className="">
+            //       Medicine Quantity:{item.Medicine_Quantity}{" "}
+            //     </p>
+            //     <p className="">
+            //       Medicine Expire Date:{item.Medicine_Expire_Date}
+            //     </p>
+            //   </div>
+            // </div>
+          ))
+        : null}
     </div>
   );
 }

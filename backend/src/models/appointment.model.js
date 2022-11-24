@@ -11,7 +11,7 @@ var Appointment = function (appointment) {
 
 Appointment.findAll = function (result) {
   dbConn.query(
-    "Select Appointment_ID,Patient_Reg_No,Appointment_Date from tbl_appointment ",
+    "Select tbl_appointment.Appointment_ID,tbl_appointment.Patient_Reg_No,tbl_medical_card.Patient_Name from tbl_appointment inner join tbl_medical_card on tbl_appointment.Patient_Reg_No = tbl_medical_card.Patient_Reg_No ",
     function (err, res) {
       if (err) {
         console.log("error: ", err);

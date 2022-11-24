@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const loginButtonStyle = {
   backgroundColor: "#91989D",
@@ -73,7 +73,7 @@ function Patient() {
                     <a href="#">Recover Password</a>
                     <br></br>
                     Not a member?{" "}
-                    <a href="registration_patient.html">Register</a>
+                    <Link to={`/registrationPatient`}>Register</Link>
                   </div>
                 </form>
               </div>

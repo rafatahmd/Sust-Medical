@@ -1,6 +1,33 @@
 import React from "react";
+import axios from "axios";
+import { useState } from "react";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 function RegistrationPatient() {
+  const [id, setID] = useState(null);
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [contact, setContact] = useState(null);
+  const [designation, setDesignation] = useState(null);
+  const [endtime, setEndtime] = useState(null);
+  const [time, setTime] = useState(null);
+  const Router = useNavigate();
+
+  const HandleSubmit = async () => {
+    const url = "http://localhost:5000/api/v1/doctor/add";
+    const res = await axios.post(url, {
+      Doctor_ID: id,
+      Doctor_Name: name,
+      Doctor_Email: email,
+      Doctor_Contact_Number: contact,
+      Doctor_Designation: designation,
+      Doctor_Start_Time: time,
+      Doctor_End_Time: endtime,
+    });
+    console.log(res);
+    Router("/alldoctor");
+  };
+
   return (
     <div>
       <div class="container">
